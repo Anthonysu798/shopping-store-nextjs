@@ -1,112 +1,104 @@
+@keyframes colorLoop {
+  0% {
+    color: #2c3e50;
+  }
+  25% {
+    color: #1abc9c;
+  }
+  50% {
+    color: #3498db;
+  }
+  75% {
+    color: #9b59b6;
+  }
+  100% {
+    color: #2c3e50;
+  }
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .navbar {
-    background: #c71313;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-  }
-  
-  .navbarContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 80px;
-    width: 100%;
-    max-width: 1500px;
-    padding: 0 24px;
-  }
-  
-  .navLogo {
-    color: #fff;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 2rem;
-    display: flex;
-    align-items: center;
-  }
-  
-  .menuIcon {
-    display: none;
-    color: #fff;
-  }
-  
-  .navMenu {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    text-align: center;
-  }
-  
-  .navItem {
-    height: 80px;
-  }
-  
-  .navLinks {
-    color: #fff;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    padding: 0 1rem;
-    height: 100%;
-    cursor: pointer;
-  }
-  
-  .navLinks:hover {
-    border-bottom: 4px solid #fff;
-  }
-  
-  @media screen and (max-width: 1180px) {
-    .navbarContainer {
-      justify-content: space-between;
-    }
-  
-    .menuIcon {
-      display: block;
-      position: absolute;
-      top: 25px;  /* Adjust this value to align with your design */
-      right: 24px;
-      transform: translate(-100%, 0);
-      font-size: 1.8rem;
-      cursor: pointer;
-    }
-  
-    .navMenu {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      height: 90vh;
-      position: absolute;
-      top: 80px;
-      left: -100%;
-      opacity: 1;
-      transition: all 0.5s ease;
-      background: #333;
-    }
-  
-    .navMenu.active {
-      background: #980e0e;
-      left: 0;
-      opacity: 1;
-      transition: all 0.5s ease;
-      z-index: 1;
-    }
-  
-    .navItem {
-      height: 60px;
-    }
-  
-    .navLinks {
-      text-align: center;
-      padding: 2rem;
-      width: 100%;
-      display: table;
-    }
-  
-    .navLinks:hover {
-      border: none;
-      background: #7b0101;
-      border-radius: 50px;
-    }
-  }
-  
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  background: linear-gradient(270deg, #b4f1f9, #89cff0, #6a93d5);
+  background-size: 600% 600%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: gradientMove 8s ease infinite;
+  transition: all 0.3s ease;
+}
+
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menuIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.navMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  position: absolute;
+  top: -500px;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to right, #b4f1f9, #89cff0);
+  transition: top 0.3s ease;
+  overflow: hidden;
+}
+
+.navMenu.active {
+  top: 64px;
+}
+
+.navItem {
+  margin: 1rem 0;
+}
+
+.navLinks {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #2c3e50;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navLinks:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.navLogo {
+  font-size: 1.5rem;
+  text-decoration: none;
+  animation: colorLoop 5s infinite;
+  transition: transform 0.3s ease;
+}
+
+.navLogo:hover {
+  transform: scale(1.1);
+}

@@ -1,40 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Timble Store Project
 
-## Getting Started
+Welcome to the Timble Store project! This markdown file provides an overview of the tools, languages, and frameworks used in this project. The Timble Store is a demo e-commerce application designed to showcase modern web development practices using various technologies.
 
-First, run the development server:
+## Project Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The Timble Store application provides a seamless shopping experience with a variety of products. It includes features such as user registration, login, and a product display section fetched from an external API.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tools, Languages, and Frameworks Used
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### Languages
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+1. **JavaScript**: The primary language used for both frontend and backend development.
+2. **HTML**: Used for structuring the content on the web pages.
+3. **CSS**: Used for styling the application.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Frameworks and Libraries
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. **Next.js**: A React framework for building server-side rendered applications. It provides routing, server-side rendering, and API routes.
+2. **React**: A JavaScript library for building user interfaces, utilized here for creating interactive components.
+3. **Tailwind CSS**: A utility-first CSS framework used for styling the application.
+4. **Bcrypt.js**: A library for hashing passwords and ensuring secure authentication.
+5. **MongoDB**: A NoSQL database used for storing user data and product information.
 
-## Learn More
+### Tools
 
-To learn more about Next.js, take a look at the following resources:
+1. **VS Code**: The code editor used for developing the project.
+2. **Cypress**: An end-to-end testing framework used for testing the application's user interface and functionalities.
+3. **Jest**: A testing framework used for unit testing JavaScript code.
+4. **Git**: A version control system used for tracking changes in the project.
+5. **GitHub**: A platform for hosting the project's source code and collaborating with other developers.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### API
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. **Fake Store API**: A third-party API used to fetch product data for display on the application.
 
-## Deploy on Vercel
+## Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **User Authentication**: Secure user registration and login functionality.
+- **Product Display**: Displays products fetched from the Fake Store API.
+- **Responsive Design**: The application is designed to be responsive and mobile-friendly.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Setup and Installation
+
+1. **Clone the repository**: `git clone https://github.com/your-repo/timble-store.git`
+2. **Install dependencies**: `npm install`
+3. **Run the development server**: `npm run dev`
+4. **Run tests**: `npm run test` for unit tests or `npm run cypress:headless` for end-to-end tests.
+
+## Contributing
+
+If you'd like to contribute to this project, please fork the repository and submit a pull request. We welcome any contributions, including bug fixes, feature additions, and improvements.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+---
+
+Thank you for checking out the Timble Store project! We hope you find it helpful and informative. If you have any questions or feedback, please don't hesitate to reach out.
