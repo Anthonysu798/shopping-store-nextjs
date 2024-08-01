@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import Link from 'next/link'; // Import Link
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -89,7 +90,7 @@ const Login = () => {
           </div>
         </form>
         <p className="text-center text-gray-600 animate-slideUp delay-500">
-          Don&apos;t have an account? <a href="/register" className="text-blue-500 hover:text-blue-700">Register</a>
+          Don&apos;t have an account? <Link href="/register"><a className="text-blue-500 hover:text-blue-700">Register</a></Link>
         </p>
       </div>
     </div>
